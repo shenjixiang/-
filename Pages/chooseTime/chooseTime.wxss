@@ -1,0 +1,116 @@
+/* miniprogram/pages/chooseTime/chooseTime.wxss */
+.container {
+
+}
+
+.up {
+    height: 480rpx;
+    width: 100%;
+    /* border: 1rpx solid black */
+}
+
+.up-img {
+    height: 350rpx;
+    text-align: center;
+    border-bottom: 1rpx solid black
+}
+
+.img {
+    height: 350rpx;
+    width: 40%;
+    border: 1rpx solid black
+}
+
+.introduction-u {
+    height: 65rpx;
+    margin-top: 10rpx;
+    margin-bottom: -10rpx
+}
+
+.introduction-d {
+    height: 60rpx;
+    text-align: center;
+    font-size: 27rpx;
+    line-height: 60rpx;
+    color: gray;
+    border-bottom: 1rpx solid rgb(184, 180, 180)
+}
+.box {
+    height: 65rpx;
+    /* width: 100%; */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto
+}
+.name {
+    font-size: 40rpx
+}
+
+.grade {
+    font-size: 40rpx;
+    margin: 0 0 0 10rpx;
+    color: rgb(243, 193, 86);
+}
+
+.down {
+    width: 100%
+}
+
+.down-u {
+    display: flex;
+    flex-direction: row;
+    font-size: 33rpx;
+    color: gray;
+    border-bottom: 1rpx solid rgb(184, 180, 180)
+}
+
+.date {
+    margin: 18rpx 12rpx 0rpx 18rpx;
+}
+
+.red-date {
+    margin: 18rpx 12rpx 0rpx 18rpx;
+    border-bottom: 1rpx solid red;
+    color: red
+}
+
+.time {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1rpx solid rgb(184, 180, 180)
+}
+
+.down-l {
+    width: 50%;
+    padding: 18rpx 28rpx;
+    display: flex;
+    flex-direction: row;
+}
+
+.down-l-r {
+    padding-left: 40rpx;
+    font-size: 25rpx 
+}
+.down-r {
+    width: 50%;
+    padding: 18rpx 28rpx;
+    display: flex;
+    flex-direction: row-reverse;
+    color: red;
+}
+
+.down-r-l {
+    margin-right: 25rpx
+}
+
+.buy {
+    border: 1rpx solid red;
+    font-size: 28rpx; 
+    /* height: 36rpx;
+    width: 65rpx; */
+    padding: 5rpx 15rpx;
+    text-align: center
+}

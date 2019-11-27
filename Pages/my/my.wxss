@@ -1,0 +1,127 @@
+/* miniprogram/pages/my.wxss */
+.container {
+
+}
+.up {
+    height: 450rpx;
+    width: 100%;
+    color: white;
+    background-image: linear-gradient(rgb(250, 100, 100),rgb(216, 81, 81));
+}
+.up-u {
+    display: flex;
+    flex-direction: row;
+}
+.up-u-l {
+    height: 160rpx;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+}
+.photo {
+    height: 130rpx;
+    width: 130rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 15rpx 30rpx;
+    border: 1rpx solid black
+}
+.user-info {
+    margin: 25rpx 0rpx;
+}
+.user-name {
+    font-size: 40rpx;
+    height: auto;
+}
+
+.user-level {
+    font-size: 23rpx;
+    height: 28rpx;
+    width: 100rpx;
+    display:inline-block;
+    text-align: center;
+    border: 1rpx solid white;
+    border-radius: 14rpx;
+}
+
+.setting {
+    height: 55rpx;
+    width: 55rpx;
+    margin-top: 40rpx;
+    margin-right: 30rpx
+}
+
+.up-d {
+    height: 190rpx;
+    margin: 50rpx 30rpx;
+    border: 1rpx solid rgb(219, 65, 65);
+    display: flex;
+    flex-direction: row;
+    border-radius: 5%;
+    background-color: rgb(219, 65, 65);
+}
+
+.up-d-content {
+    width: 25%;
+    padding: 50rpx 25rpx;
+    text-align: center;
+    font-size: 30rpx;
+}
+
+.mid {
+    height: 230rpx;
+    width: 95%;
+    margin: 50rpx 0rpx 0 20rpx;
+    border: 1rpx solid rgb(219, 216, 216);
+    border-radius: 5%;
+}
+
+.mid-text {
+    margin: 10rpx 30rpx 0 30rpx;
+    font-size: 40rpx;
+    height: auto;
+}
+
+.order {
+    display: flex;
+    flex-direction: row;
+    margin: 10rpx 30rpx;
+    height: 150rpx;
+    font-size: 30rpx
+}
+
+.order-in {
+    width: 25%;
+    padding: 15rpx 30rpx;
+    text-align: center
+}
+
+.order-img {
+    height: 60rpx;
+    width: 60rpx;
+}
+
+.down {
+    height: 230rpx;
+    width: 95%;
+    border-bottom: 1rpx solid rgb(209, 207, 207);
+    margin: 0 0 0 20rpx 
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    margin: 10rpx 0rpx;
+    font-size: 34rpx;
+}
+
+.card-in {
+    flex: 1;
+    text-align: center;
+    padding: 43rpx 0rpx;
+    margin: 10rpx 10rpx;
+    /* opacity: 0.5; */
+    height: auto;
+    border-radius: 10%;
+    border: 1rpx solid black;
+}

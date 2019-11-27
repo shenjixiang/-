@@ -1,0 +1,55 @@
+<!--miniprogram/pages/chooseTime/chooseTime.wxml-->
+<view class="container">
+    <view class="up">
+        <view class="up-img">
+            <image class="img" src="{{movie.MovieImgUrl}}" mode="scaleToFill" >
+            
+            </image>
+        </view>
+        <view class="introduction-u">
+            <view class="box">
+            <view class="name">
+                {{movie.MovieName}}
+            </view>
+            <view class="grade">
+                {{movie.Score}}分
+            </view>
+            </view>
+        </view>
+        <view class="introduction-d">
+            {{movie.Duration}}分钟|{{movie.MovieType}}|{{movie.Stars}}
+        </view>
+    </view>
+    <view class="down">
+        <view class="down-u">
+            <view class="{{index==ind?'red-date':'date'}}" wx:for="{{times}}" wx:key="{{index}}" data-id="{{index}}" bindtap="chooseDate">
+                {{item.date}}
+            </view>
+        </view>
+        <view class="down-d">
+            <view class="time" wx:for="{{time}}" wx:key="{{index}}">
+                <view class="down-l">
+                    <view class="down-l-l">
+                        {{item.startTime}}    
+                    </view>
+                    <view class="down-l-r">
+                        <view>
+                            2D国语
+                        </view>
+                        <view>
+                            {{item.hallName}}
+                        </view>
+                    </view>
+                </view>
+                <view class="down-r">
+                    <button class="buy" bindtap="toChooseSeat">
+                        购票
+                    </button>
+                    <view class="down-r-l">
+                        {{item.price}}    
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

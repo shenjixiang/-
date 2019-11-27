@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "Pages/index/index",
+    "Pages/select_seat/select_seat",
+    "Pages/page2/page_2",
+    "Pages/my/my",
+    "Pages/chooseTime/chooseTime",
+    "Pages/movie/movie"
+
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "backgroundColor":"#ffffff"
+  },
+  
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "iconPath": "Pages/images/电影.png",
+        "selectedIconPath": "Pages/images/电影2.png",
+        "pagePath": "Pages/index/index",
+        "text": "电影"
+      },
+      {
+        "iconPath": "Pages/images/乐购.png",
+        "selectedIconPath": "Pages/images/乐购2.png",
+        "pagePath": "Pages/page2/page_2",
+        "text": "乐购"
+      },
+      {
+        "iconPath": "Pages/images/我的.png",
+        "selectedIconPath": "Pages/images/我的2.png",
+        "pagePath": "Pages/my/my",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap53.json"
+}

@@ -1,0 +1,37 @@
+<!--电影信息-->
+<view class='info'>
+  <view class='movieName'>{{movieName}}-{{playType}}</view>
+  <view class='planDetail'>{{planDetail}}</view>
+  <view class='about'>
+    <button class="button cu-btn bg-gradual-pinks shadow-blur round " open-type='share'>邀请</button>
+  </view>
+</view>
+<!--座位状态说明-->
+<view class="seatDemosBack" >
+  <view class="seatDemos">
+    <block wx:for="{{seatTypeList}}" wx:for-index="index" wx:for-item="seatTypeItem" wx:key="index">
+      <view class="seatDemo">
+        <image class="seatDemoItem" src="{{seatTypeItem.icon}}"></image>
+        <view class="seatDemoItem"> {{seatTypeItem.name}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+<!--位示图-->
+<view class='hallName'>
+   <text >{{hallName}}</text>
+</view>
+<view class='seatArea' style='width:268px;height:158px;top:20px'>
+        <!--<view wx:for="{{seatStatus}}" wx:for-index="groupindex">-->
+            <!--<view wx:for="{{seatStatus[groupindex]}}" wx:for-index="seatindex" wx:for-item="seat" class='seatTap'style='top:{{groupindex*25}}px;left:{{seatindex*20}}px' >-->
+            <view wx:for="{{seatList}}" wx:for-index="seatindex" wx:for-item="seat" class='seatTap'style='top:{{seatList[seatindex].row*25}}px;left:{{seatList[seatindex].col*20}}px' >
+              <image style='width:20px;height:20px' catchtap='clickSeat' src="{{seatList[seatindex].icon}}" data-seatindex="{{seatindex}}" ></image>
+            </view>
+        <!--</view>-->
+</view>
+
+<!-- 以下是确认选座 -->
+<view class='orderComfirm' style="flex-direction:row;">
+  <view class='comfirm' bindtap='confirmHandle'>￥
+    <text>{{totalPrice}}</text> 元 确认选座</view>
+</view>

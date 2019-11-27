@@ -1,0 +1,74 @@
+<!--banner-->
+<swiper indicator-dots="{{indicatorDots}}" 
+        vertical="{{vertical}}"    
+        autoplay="{{autoplay}}"
+        interval="{{interval}}" 
+        duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="item">
+    <swiper-item >
+      <image src="{{item}}" data-src="{{item}}" ></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!--导航条-->  
+<view class="navbar">  
+  <text wx:for="{{navbar}}" 
+        data-idx="{{index}}" 
+        class="item {{currentTab==index ? 'active' : ''}}" 
+        wx:key="unique" 
+        bindtap="navbarTap">{{item}}
+  </text>  
+</view> 
+
+<!--推荐-->
+<view hidden="{{currentTab!==0}}">
+  <scroll-view scroll-y="true" bindtap="onPullDownRefresh">
+
+    <view class='case-page'>
+      <view class='list-masonry'>
+        <view class='item-masonry' wx:for="{{note}}">
+          <image src='{{item.url}}' mode='widthFix'></image>
+          <text>{{item.title}}</text>
+
+          <view style="display:flex;flex-direction:row;">
+            <view class='lable1'>
+              <text class="character">{{item.lable1}}</text>
+            </view>
+            <view class='lable2'>
+              <text class="character">{{item.lable2}}</text>
+            </view>
+          </view>
+
+          <view style="display:flex;flex-direction:row;">
+            <view>
+              <text class="price">{{item.price}}</text>
+            </view>
+            <view>
+              <text class="numpeople">{{item.numpeople}}</text>
+            </view>
+          </view>
+        </view>
+     </view>
+    </view>
+
+  </scroll-view>
+</view>
+
+
+<!--商品-->  
+<view hidden="{{currentTab!==1}}">  
+  tab_02  
+</view>  
+
+
+<!--美图-->  
+<view hidden="{{currentTab!==2}}">  
+  tab_03  
+</view>
+
+
+<!--情报-->  
+<view hidden="{{currentTab!==3}}">  
+  tab_03  
+</view>

@@ -1,0 +1,70 @@
+<!--index.wxml-->
+<view>
+  <swiper class="lunbo" indicator-dots="true" autoplay="true" interval="3000" circular="true">
+      <swiper-item><image mode="aspectFill" src="{{lunbo[0]}}"></image></swiper-item>
+      <swiper-item><image mode="aspectFill" src="{{lunbo[1]}}"></image></swiper-item>
+      <swiper-item><image mode="aspectFill" src="{{lunbo[2]}}"></image></swiper-item>
+      <swiper-item><image mode="aspectFill" src="{{lunbo[3]}}"></image></swiper-item>
+  </swiper>
+</view>
+
+
+<view class="ranking">
+  <!-- <view class="ranking-title">上映列表</view> -->
+  <view class='two'>
+    <button class='two-one' bindtap='toOne'>
+      <view>评论</view>
+      <view class="two-line" wx:if="{{two}}"></view>
+    </button> 
+    <button class='two-one' bindtap='toTwo'>
+      <view>详情</view>
+      <view class="two-line" wx:if="{{!two}}"></view>
+    </button> 
+</view>
+  <view class="ranking-top">
+    <view class="ranking-top-grade">评分</view>
+    <view class="ranking-top-peoplenumber">购票入口</view>
+  </view>
+   <block wx:if="{{two}}" wx:for="{{filmDetails}}" wx:for-index="index" wx:for-item="filmDetails">
+    <navigator class="ranking-list" url="../movie/movieDetail/movieDetail?id={{filmDetails._id}}" >
+      <image src="{{filmDetails.pic}}" class="ranking-list-pic"></image>
+      <view class="ranking-list-teachername">{{filmDetails.film_name}}</view>
+      <view class="ranking-list-teachclass">主演：{{filmDetails.lead_names}}</view>
+      <view class="ranking-list-grade">{{filmDetails.star}}</view>
+      
+    </navigator>
+    <view class="ranking-list-buy">
+        <button bindtap="toBuy">购票</button>
+      </view>
+     
+  <view class="ranking-line"></view>
+  </block>
+  <block wx:if="{{!two}}" wx:for="{{filmDetails}}" wx:for-index="index" wx:for-item="filmDetails">
+    <navigator class="ranking-list" url="../movie/movieDetail/movieDetail?id={{filmDetails._id}}" >
+      <image src="{{filmDetails.pic}}" class="ranking-list-pic"></image>
+      <view class="ranking-list-teachername">{{filmDetails.film_name}}</view>
+      <view class="ranking-list-teachclass">主演：{{filmDetails.lead_names}}</view>
+      <view class="ranking-list-grade">{{filmDetails.star}}</view>
+    </navigator>
+    <view class="ranking-list-buy">
+        <button>购票</button>
+    </view>
+  <view class="ranking-line"></view>
+  </block>
+</view>
+
+
+<!-- 
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
+-->

@@ -1,0 +1,34 @@
+<!--pages/movie/movieDetail/movieDetail.wxml-->
+<view class='top'>
+  <image class="head-pic" src="{{film.pic}}"/>
+  <view class="head-detail">
+      <view class="name">{{film.name}}</view>
+      <view class="star">{{film.star}}</view>
+      <view class="type">{{film.type}}</view>
+      <view class="aera">{{film.aera}}</view>
+      <view class="time">{{film.time}}分钟</view>
+      <view class="start_time">{{film.start_time}}上映</view>
+    </view>
+    <image class="bgc" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4236342036,891882353&fm=26&gp=0.jpg" mode="aspectFill" mode="aspectFill"/>
+  
+    
+</view>
+
+<view class='detail'>
+    <textarea class='detail_text'>
+    {{film.details}}
+    </textarea>
+</view>
+
+<view class='actor'>
+<scroll-view scroll-x="true" style=" white-space: nowrap; display: flex ; " class='actor' >
+<block wx:for="{{actors}}" wx:for-index="index" wx:for-item="actor">
+<view  class = "actor_show" >
+  <image class ="actor_pic" src='{{actor.pic}}'></image>
+    <text class='actor_text'>演员:{{actor.name}}</text>
+    <text class='actor_text'>饰演:{{actor.actor}}</text>
+</view>
+</block>
+</scroll-view>
+
+</view>

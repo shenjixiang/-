@@ -1,0 +1,99 @@
+page{
+  background:#eeeeee;
+}
+
+/* 直接设置swiper属性 */
+swiper {
+  height: 200rpx;
+}
+swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+
+/*导航条*/
+.navbar{    
+  display: flex;
+  flex-direction:row;  
+  background: #ffffff;  
+
+}  
+.navbar .item{  
+  position: relative;  
+  flex: auto;  
+  left: 10rpx;   
+  line-height: 80rpx;  
+  font-size:14px;
+}  
+/* 顶部导航字体颜色 */
+.navbar .item.active{  
+  color:black; 
+  font-size: 17px;
+  font-weight: 700;
+} 
+/* 顶部指示条属性 */
+.navbar .item.active:after{  
+  content: "";  
+  display: block;  
+  position: absolute;  
+  bottom: 10rpx;  
+  left: 10rpx;  
+  right: 140rpx;  
+  height: 6rpx;  
+  background: rgb(245, 101, 149); 
+  border-radius: 10rpx; 
+} 
+
+
+.case-page{
+  padding:5rpx;/*内边距*/
+  border-width:3px;
+  border-color:black;
+  margin:10rpx;
+}
+.list-masonry{
+  column-count: 2;/*规定为被分隔的列数*/
+  column-gap: 20rpx;/*列间隔*/
+}
+.item-masonry{
+  background-color: #fff;
+  break-inside: avoid;/*避免在元素内部插入分页符*/
+  box-sizing: border-box; 
+  padding: 20rpx;
+  margin-bottom:20rpx;
+  border-radius: 15rpx;
+}
+.item-masonry image {
+  width: 100%;
+}
+
+.lable1{
+border:1rpx solid rgb(245, 101, 149);
+margin-top: 3rpx;
+margin-left: 0rpx;
+margin-right: 10rpx;
+padding-bottom: 3rpx;
+padding-left: 8rpx;
+padding-right:8rpx;
+}
+.lable2{
+border:1rpx solid rgb(245, 101, 149);
+margin-top: 3rpx;
+margin-left: 0rpx;
+padding-bottom: 3rpx;
+padding-left: 8rpx;
+padding-right:8rpx;
+}
+.character{
+  color: rgb(245, 101, 149);
+  font-size: 12px;
+}
+.price{
+  color: rgb(245, 101, 149);
+  font-size: 17px;
+}
+.numpeople{
+  color: rgb(180, 173, 173);
+  font-size:12px;
+  margin-left:70rpx;
+}

@@ -1,0 +1,8 @@
+@import "style/main.wxss";
+@import "style/icon.wxss";
+.about{
+  position: absolute;
+  right:80rpx;
+  top:50%;
+  transform: translateY(-50%)
+}
