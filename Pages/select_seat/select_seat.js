@@ -15,6 +15,8 @@ Page({
     totalPrice: 0,
     seatList:[],
     seatId:[],
+    seatStatus: [[]],
+    selectedSeat: [],
     userId:"",
     seatTypeList: [
       {
@@ -42,7 +44,6 @@ Page({
       },
     ],
     hallName: "",
-    seatStatus: [[]],
   },
   
 
@@ -162,12 +163,6 @@ Page({
                       let seatIds = that.data.seatIds
                       let price = that.data.price;
                       var seatList = that.data.seatList
-                      //console.log('seatList:')
-                      //console.log(that.data.seatList)
-                      // var seatList = [1,2,3,4]
-                      // var l = seatList.length
-                      // console.log('长度：')
-                      // console.log(l)
                       for (var index in seatStatus) {
                         for (var index1 in seatStatus[index]) {
                           var slength = seatList.length
@@ -209,12 +204,14 @@ Page({
     let seatList = this.data.seatList;
     let seatId = this.data.seatId;
     let totalPrice = this.data.totalPrice;
+    let selectedSeat = this.data.selectedSeat;
     console.log(index)
     console.log(seatList[index].icon)
     if (seatList[index].icon == "https://i.postimg.cc/BbbWyY5D/image.png"){
       seatList[index].icon = "https://i.postimg.cc/1X2dd93h/image.png"
       totalPrice = Number(totalPrice) + Number(seatList[index].price)
       seatId.push(seatList[index].id)
+      selectedSeat.push(seatList[index])
     }
     else if (seatList[index].icon == "https://i.postimg.cc/1X2dd93h/image.png") {
       seatList[index].icon = "https://i.postimg.cc/BbbWyY5D/image.png"
@@ -224,12 +221,18 @@ Page({
           seatId.splice(index1,1)
         }
       }
+      for (var index1 in selectedSeat) {
+        if (selectedSeat[index1].id == seatList[index].id) {
+          selectedSeat.splice(index1, 1)
+        }
+      }
     }
     console.log(seatList[index].icon)
     this.setData({
       seatList: seatList, //这里的设置 是让定义的变量等于你写的变量
       totalPrice: totalPrice,
-      seatId: seatId
+      seatId: seatId,
+      selectedSeat: selectedSeat
     })
     console.log(seatId)
   },

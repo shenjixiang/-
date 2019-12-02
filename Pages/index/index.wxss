@@ -76,7 +76,7 @@
 }
 .ranking-list-pic{
     width: 130rpx;
-    height: 130rpx;
+    height: 200rpx;
     align-self: center;
     margin-left: 1%;
     margin-top: 2%;
@@ -103,8 +103,9 @@
     color: #E51C23;
 }
 .ranking-list-buy{
-    align-self: center;
-    margin-left: 30rpx;
+    position: absolute;
+     margin-top: 4%; 
+    margin-left: 76%;
 }
 
 .ranking-line{
@@ -135,4 +136,54 @@
 
 .usermotto {
   margin-top: 200px;
+}
+.name-content {
+  position: absolute;
+    margin-top:70rpx;
+    margin-left:180rpx;
+    font-size:32rpx;
+  width: 300rpx;
+  display:-webkit-box;
+  -webkit-line-clamp:1;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  -webkit-box-orient:vertical;
+  word-break:break-all;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    margin: 10rpx 30rpx;
+    height: 150rpx;
+    font-size: 20rpx
+}
+
+.card-in {
+    width: 25%;
+    padding: 15rpx 20rpx;
+    height: 150rpx;
+    text-align: center;
+    
+    
+}
+
+.card-img {
+  padding: 7rpx;
+    height: 75rpx;
+    width: 75rpx;
+    border-radius: 50%;
+    border: 1rpx solid white;
+
+}
+.card-text {
+    margin-top:15rpx; 
+    
+}
+.btn1 {
+  width: 160rpx;
+  /* margin-top: 20rpx; */
+  background-color: gray;
+  color: white;
+  border-radius: 14%; 
 }

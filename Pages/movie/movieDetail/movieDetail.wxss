@@ -15,22 +15,23 @@
 
 .head-pic{
    position:absolute;
-    margin-top: 70rpx;
-    margin-left: 70rpx;
-    height: 230rpx;
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+    height: 300rpx;
     width: 230rpx;
 }
 .head-detail{
     position:absolute;
     margin-top: 70rpx;
-    margin-left: 370rpx;
+    margin-left: 270rpx;
     height: 230rpx;
     width: 230rpx;
+    color: gray
 }
 
 .detail{
   width: 100%;
-
+  height: 230rpx
   
 }
 .detail_text{
@@ -61,4 +62,24 @@
   margin-left: 20rpx;
   width: 120rpx;
   margin-bottom: 1rpx;
+}
+.name{
+  font-size: 50rpx; 
+  color: white;
+}
+.star{
+color: #FFD700;
+}
+.ad{
+  width: 100%;
+  height: 130rpx;
+  background: #D3D3D3;
+   padding: 20rpx
+}
+.imageAd{
+  width: 95%;
+  height: 100%;
+  border-radius: 5%;
+    border: 1rpx solid #D3D3D3;
+   
 }

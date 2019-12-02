@@ -96,6 +96,13 @@
     text-align: center
 }
 
+.order-in2 {
+    width: 25%;
+    padding: 15rpx 15rpx;
+    text-align: center;
+    font-size: 25rpx
+}
+
 .order-img {
     height: 60rpx;
     width: 60rpx;
@@ -124,4 +131,8 @@
     height: auto;
     border-radius: 10%;
     border: 1rpx solid black;
+}
+.image_png{
+  height:800rpx;
+  width:750rpx;
 }

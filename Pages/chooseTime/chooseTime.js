@@ -25,7 +25,7 @@ Page({
     console.log(event.currentTarget.dataset.id)
     console.log(times[event.currentTarget.dataset.id])
     this.setData({
-      time : times[event.currentTarget.dataset.id].timesToday,
+      time : times[0].timesToday,
       ind : event.currentTarget.dataset.id
     })
   },

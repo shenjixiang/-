@@ -92,23 +92,7 @@
             </view>
         </view>
     </view>
-    <view class="down">
-        <view class="down-text">
-            卡包中心
-        </view>
-        <view class="card">
-            <view class="card-in" style="background-color:#FFEBCD">
-                会员卡
-            </view>
-            <view class="card-in" style="background-color:#BFEFFF">
-                观影卡
-            </view>
-            <view class="card-in" style="background-color:#87CEFA">
-                猫享卡
-            </view>
-            <view class="card-in" style="background-color:#FF8C69">
-                联合会员
-            </view>
-        </view>
-    </view>
+    <image src="../../images/my.jpg" class="image_png" mode="scaleToFill"></image>
+
+ 
 </view>

@@ -3,13 +3,13 @@
   <image class="head-pic" src="{{film.pic}}"/>
   <view class="head-detail">
       <view class="name">{{film.name}}</view>
-      <view class="star">{{film.star}}</view>
+      <view class="star">评分：{{film.star}}</view>
       <view class="type">{{film.type}}</view>
       <view class="aera">{{film.aera}}</view>
       <view class="time">{{film.time}}分钟</view>
       <view class="start_time">{{film.start_time}}上映</view>
     </view>
-    <image class="bgc" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4236342036,891882353&fm=26&gp=0.jpg" mode="aspectFill" mode="aspectFill"/>
+    <image class="bgc" src="../../images/背景.jpg" mode="aspectFill" mode="aspectFill"/>
   
     
 </view>
@@ -20,7 +20,14 @@
     </textarea>
 </view>
 
+
+<view class='ad'>
+<image class='imageAd' src='../../images/ad.jpg'></image>
+</view>
+
+
 <view class='actor'>
+<view> 演职人员</view>
 <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex ; " class='actor' >
 <block wx:for="{{actors}}" wx:for-index="index" wx:for-item="actor">
 <view  class = "actor_show" >

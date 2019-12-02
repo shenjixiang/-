@@ -2,28 +2,28 @@
 <view class="container">
     <view class="up">
         <view class="up-img">
-            <image class="img" src="{{movie.MovieImgUrl}}" mode="scaleToFill" >
+            <image class="img" src="{{movie.movieImgUrl}}" mode="scaleToFill" >
             
             </image>
         </view>
         <view class="introduction-u">
             <view class="box">
             <view class="name">
-                {{movie.MovieName}}
+                {{movie.movieName}}
             </view>
             <view class="grade">
-                {{movie.Score}}分
+                {{movie.score}}分
             </view>
             </view>
         </view>
         <view class="introduction-d">
-            {{movie.Duration}}分钟|{{movie.MovieType}}|{{movie.Stars}}
+            {{movie.duration}}分钟|{{movie.movieType}}|{{movie.stars}}
         </view>
     </view>
     <view class="down">
         <view class="down-u">
-            <view class="{{index==ind?'red-date':'date'}}" wx:for="{{times}}" wx:key="{{index}}" data-id="{{index}}" bindtap="chooseDate">
-                {{item.date}}
+            <view class="{{index==ind?'red-date':'date'}}" wx:for="{{date}}" wx:key="{{index}}" data-id="{{index}}" bindtap="chooseDate">
+                {{item}}
             </view>
         </view>
         <view class="down-d">
@@ -37,7 +37,7 @@
                             2D国语
                         </view>
                         <view>
-                            {{item.hallName}}
+                            {{item.hallId}}号厅
                         </view>
                     </view>
                 </view>

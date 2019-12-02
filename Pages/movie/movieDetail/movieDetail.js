@@ -33,13 +33,13 @@ Page({
             title: '成功',
           })
           console.log(res.data.data.movie);
-          var i = 0;
-          var myswipers = new Array()
-          for (var sw in res.data.data.movie) {
+          //var i = 0;
+          //var myswipers = new Array()
+          //for (var sw in res.data.data.movie) {
         
             //var id = 'film[' + i + ']._id'
             var type = 'film.type'
-            var name = 'film.film_name'
+            var name = 'film.name'
             var lead_names = 'film.lead_names'
             var pic = 'film.pic'
             var star = 'film.star'
@@ -47,18 +47,18 @@ Page({
             var start_time = 'film.start_time'
             var details = 'film.details'
             that.setData({
-              [type]: res.data.data.movie.PlayType,
-              [name]: res.data.data.movie.MovieName,
-              [lead_names]: res.data.data.movie.Stars,
-              [pic]: res.data.data.movie.MovieImgUrl,
-              [star]: res.data.data.movie.Score,
-              [area]: res.data.data.movie.SourceArea,
-              [start_time]: res.data.data.movie.ReleaseDate,
-              [details]: res.data.data.movie.Details,
+              [type]: res.data.data.movie.movieType,
+              [name]: res.data.data.movie.movieName,
+              [lead_names]: res.data.data.movie.stars,
+              [pic]: res.data.data.movie.movieImgUrl,
+              [star]: res.data.data.movie.score,
+              [area]: res.data.data.movie.sourceArea,
+              [start_time]: res.data.data.movie.releaseDate,
+              [details]: res.data.data.movie.details,
               //[start_time]: res.data.data.movie[i].releaseDate,
             })
-            i++
-          }
+           // i++
+         // }
 
 
         }
