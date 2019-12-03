@@ -1,5 +1,6 @@
 /* miniprogram/pages/chooseTime/chooseTime.wxss */
 .container {
+  background-color: white
 
 }
 
@@ -32,7 +33,7 @@
     text-align: center;
     font-size: 27rpx;
     line-height: 60rpx;
-    color: gray;
+    color: white;
     border-bottom: 1rpx solid rgb(184, 180, 180)
 }
 .box {
@@ -46,7 +47,8 @@
     margin: 0 auto
 }
 .name {
-    font-size: 40rpx
+    font-size: 40rpx;
+    color:white;
 }
 
 .grade {
@@ -80,7 +82,10 @@
 .time {
     display: flex;
     flex-direction: row;
-    border-bottom: 1rpx solid rgb(184, 180, 180)
+    border-bottom: 1rpx solid rgb(184, 180, 180);
+    margin-left: 30rpx;
+     margin-right: 30rpx;
+   
 }
 
 .down-l {
@@ -89,28 +94,55 @@
     display: flex;
     flex-direction: row;
 }
+.down-l-l{
+  font-size: 40rpx;
+  font-weight: bold;
+  position: relative;
+  top:20rpx;
+
+}
 
 .down-l-r {
     padding-left: 40rpx;
-    font-size: 25rpx 
+    font-size: 25rpx;
+    position: relative;
+    top:10rpx;
+    color: #666666;
+   
+
 }
 .down-r {
     width: 50%;
     padding: 18rpx 28rpx;
     display: flex;
     flex-direction: row-reverse;
-    color: red;
+    color: #ff4976;
+      
+    
 }
 
 .down-r-l {
-    margin-right: 25rpx
+    position:relative;    
+    top:10rpx;
+    left:80rpx;
+    font-size:40rpx;
+    font-weight: bold;
+    
+
 }
 
 .buy {
-    border: 1rpx solid red;
+    border: 1rpx solid #ff4976;
     font-size: 28rpx; 
     /* height: 36rpx;
     width: 65rpx; */
-    padding: 5rpx 15rpx;
-    text-align: center
+    color:#ff4976;
+    text-align: center;
+   border-radius: 13px;
+    position:relative;    
+    left:50rpx;
+}
+
+.image{
+  height:900rpx;
 }

@@ -8,6 +8,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     two: true,
+    a:0,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     lunbo: ["http://img0.imgtn.bdimg.com/it/u=2086423499,4205961149&fm=11&gp=0.jpg",
     "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559240042649&di=143c778404fc340e390c188a22446a32&imgtype=0&src=http%3A%2F%2Fzhejiang.eol.cn%2Fzhejiang_gkkx%2F201503%2FW020150318313773570683.jpg",
@@ -193,7 +194,9 @@ Page({
   toOne: function () {
     this.setData({ 
       two: true,
-      filmDetails: this.data.filmShowing
+      filmDetails: this.data.filmShowing,
+      a:0
+      
     })
     this.onLoad
   },
@@ -201,7 +204,9 @@ Page({
   toTwo: function () {
     this.setData({ 
       two: false,
-      filmDetails: this.data.filmComing
+      filmDetails: this.data.filmComing,
+      a: 1
+      
 
     })
   },

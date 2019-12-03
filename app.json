@@ -1,10 +1,14 @@
 {
   "pages": [
-    "Pages/index/index",
+      "Pages/index/index",
+    "Pages/order/order",
+    "Pages/chooseTime/chooseTime",
     "Pages/select_seat/select_seat",
     "Pages/page2/page_2",
     "Pages/my/my",
-    "Pages/chooseTime/chooseTime",
+    
+
+    
     "Pages/movie/movie"
 
   ],

@@ -1,6 +1,6 @@
 <!--miniprogram/pages/chooseTime/chooseTime.wxml-->
 <view class="container">
-    <view class="up">
+    <view class="up"style="background:url('https://weever01.oss-cn-hangzhou.aliyuncs.com/sjx_other_temp/background1.jpg')">
         <view class="up-img">
             <image class="img" src="{{movie.movieImgUrl}}" mode="scaleToFill" >
             
@@ -46,10 +46,11 @@
                         购票
                     </button>
                     <view class="down-r-l">
-                        {{item.price}}    
+                        ¥{{item.price}}    
                     </view>
                 </view>
             </view>
         </view>
     </view>
+    <image src="../images/eat.jpg" class="image"></image>
 </view>

@@ -1,0 +1,86 @@
+page{
+  background:#eeeeee;
+}
+
+.item-masonry{
+  background-color: #fff;
+  border:1rpx solid #eeeeee;
+  box-sizing: border-box; 
+  padding: 20rpx;
+  margin-top: 20rpx;
+}
+
+.cinema-paytime{
+  border-bottom:1rpx solid  #eeeeee;
+  padding: 5rpx;
+}
+
+.cinema{
+  font-size: 12px;
+  margin-left: 5rpx;
+  margin-bottom:15rpx; 
+  color:#53535080;
+}
+
+.paytime{
+  font-size: 14px;
+  color:red;
+  margin-left: 230rpx;
+  margin-bottom:15rpx; 
+}
+
+.url{
+  width: 100rpx;
+  margin-top:40rpx; 
+}
+
+.ticketmessage{
+   margin-left: 30rpx;
+}
+
+.name-count{
+  font-size:14px;
+  margin-top: 32rpx; 
+  margin-bottom: 15rpx;
+}
+
+.releasetime{
+  font-size:11px;
+  color:#53535080;
+}
+
+.seat{
+  font-size:11px;
+  color:#53535080;
+  width: 320rpx;
+}
+
+.button{
+  width: 100px;
+  margin-top: 50rpx;
+  margin-left: 180rpx;
+}
+.ticketprice{
+  border-top:1rpx solid  #eeeeee;
+  margin-top: 12rpx;
+  padding-top: 16rpx;
+  font-size:13px;
+  color:#53535080;
+}
+
+.concel{
+  color: red;
+  margin-left: 510rpx;
+  width: 40rpx;
+
+}
+.other1{
+  margin-top:50rpx; 
+  margin-left: 115rpx;
+  font-size:13px;
+}
+
+.erweima{
+  background-color: black;
+  color: white;
+}

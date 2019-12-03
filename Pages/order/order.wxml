@@ -1,0 +1,42 @@
+<scroll-view scroll-y="true" bindtap="onPullDownRefresh">
+      <view class="item-masonry" wx:for="{{note}}">
+          <view class = "cinema-paytime" style="display:flex;flex-direction:row;">
+            <view class="cinema">
+              <text bindtap="toMap">{{item.cinema}}</text>
+            </view>
+
+      
+          </view>
+          
+          <view style="display:flex;flex-direction:row;">
+            <view>
+              <image class="url" mode="widthFix" src="{{item.url}}"></image>
+            </view>
+
+            <view class = "ticketmessage" style="display:flex;flex-direction:column;">
+              <view class="name-count" >
+                <text>{{item.name}} {{item.count}}</text>
+              </view>
+              
+              <view class="releasetime">
+                <text>{{item.releasetime}}</text>
+              </view>
+
+              <view class="seat">
+                <text>{{item.seat}}</text>
+              </view>
+            </view>
+
+            <view class="button">
+              <image src="../images/erweima.png" style="width:80rpx;height:80rpx"></image>
+            
+            </view>
+          </view>
+
+          <view class="ticketprice" style="display:flex;flex-direction:row">
+            <text>{{item.price}}</text>
+          </view>
+        </view>
+
+       
+</scroll-view>

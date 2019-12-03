@@ -8,62 +8,62 @@ Page({
     userPhoto:'../../images/IMG_3509.JPG',
     userName:'小小一水',
     userLevel:'普通用户',
-    setting:'../images/设置.png'
+    setting:'../images/设置.png',
+    hasUserInfo:false,
+    code:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+  
 
+  getUserInfo: function (e) {
+    console.log(e.detail)
+    //console.log(e.detail.userInfo.userName)
+    this.setData({
+      userInfo: e.detail.userInfo,
+      hasUserInfo: true,
+      userName:e.detail.userInfo.nickName,
+      userPhoto: e.detail.userInfo.avatarUrl
+    })
+   
+    // 获取openid
+    var that=this
+    wx.request({
+      url: 'http://47.106.13.104:3000/login',
+      data: { 
+        
+        js_code: getApp().globalData.code ,
+        appid: getApp().globalData.appid,
+        secret: getApp().globalData.secret,
+        grant_type: 'authorization_code'
+
+          
+      },
+      method: 'POST',
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        if (res.statusCode == 200) {
+         //console.log(res.data.data.user.openId)
+          // that.globalData.openid = res.data
+          wx.setStorageSync('openid', res.data.data.user.openId)
+        } else {
+          console.log(res.errMsg)
+        }
+      },
+    })
+   
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  toOrder:function(){
+    wx.navigateTo({
+      url:"../order/order"
+    })
   }
-})
+  
+})//page

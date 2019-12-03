@@ -6,19 +6,11 @@ Page({
    */
   data: {
     date : ["10月12日","10月13日"],
-    data : [[{time:"19:42",room:"1号厅",price:"43元",type:"国语2D"},
-    {time:"19:42",room:"1号厅",price:"43元",type:"英语4D"},
-    {time:"19:42",room:"1号厅",price:"43元",type:"德语2D"},
-    {time:"19:42",room:"1号厅",price:"43元",type:"国语2D"},
-    {time:"19:42",room:"1号厅",price:"43元",type:"国语2D"}],
-    [{time:"12:42",room:"1号厅",price:"43元",type:"国语2D"},
-    {time:"12:42",room:"1号厅",price:"43元",type:"英语4D"},
-    {time:"12:42",room:"1号厅",price:"43元",type:"德语2D"},
-    {time:"12:42",room:"1号厅",price:"43元",type:"国语2D"},
-    {time:"12:42",room:"1号厅",price:"43元",type:"国语2D"}]],
+    data : [],
     time : [],
-    ind : 0
+    ind : 0,
   },
+  
 
   chooseDate: function (event) {
     let times = this.data.times
@@ -28,6 +20,7 @@ Page({
       time : times[0].timesToday,
       ind : event.currentTarget.dataset.id
     })
+   
   },
   /**
    * 生命周期函数--监听页面加载
@@ -62,13 +55,20 @@ Page({
       success: function(res){
         // success
         console.log(res.data.data.times)
+
         let time = res.data.data.times[0].timesToday
+       
+        for (var i = 0; i <time.length; i++) {
+         time[i].startTime = time[i].startTime.slice(0, 5)
+          console.log(time[i].startTime)
+        }
         that.setData({
           times: res.data.data.times,
           time: time
         })
+    
+       
 
-        console.log(time)
       }
     })
   },

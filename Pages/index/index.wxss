@@ -1,42 +1,69 @@
 /**index.wxss**/
-
+.on{
+  color: #c64740
+}
 .two{
   display: flex;
-  margin-top: 15rpx;
+
   width: 100%;
   height: 120rpx;
+  background: white;
+}
+.top_image{
+  height:350rpx;
+  width:750rpx;
 }
 .two-one{
+  background-color: white;
   text-align:center;
-  width: 50%;
-  height: 100rpx;
+  width: 25%;
+  height: 80rpx;
   display:flex;
   flex-direction: column;
   align-items:center;
   justify-content:center;
-  border-radius: 0;
+  font-size: 13px;
+  font-weight: bold;
+  
+
+}
+.two-one-a{
+  background-color: white;
+  text-align:center;
+  width: 25%;
+  height: 80rpx;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+  font-size: 13px;
+  font-weight: bold;
+ 
+}
+.two-one-a::after{
+  border: none;
+
 }
 .two-one::after{
   border: none;
 }
 .two-line{
-    height: 1rpx;
-    width: 35%;
-    margin:0 auto;
-    margin-top: -6rpx;
+    height: 4rpx;
+    width: 50px;
     text-align: center;
-    background: #3A58FF;
+    background: #c64740;
 }
 .lunbo{
-    margin-top:6rpx;
+    margin-top: -20rpx;
     width: 100%;
+    height: 180rpx;
 }
 .lunbo image{
     width:100%;
 }
 
 .ranking{
-    margin-top:2%;
+  
     width: 100%;
     background-color: white;
 }
@@ -63,7 +90,7 @@
 .ranking-list{
     border-radius: 30rpx;
     width: 100%;
-    height:140rpx;
+    height:200rpx;
     margin-top: 2%;
     margin-bottom: 2%;
     display: flex;
@@ -76,35 +103,56 @@
 }
 .ranking-list-pic{
     width: 130rpx;
-    height: 200rpx;
+    height: 170rpx;
     align-self: center;
-    margin-left: 1%;
+    margin-left: 3%;
     margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 7px;
 }
 .ranking-list-teachername{
+  display: flex;
     position: absolute;
-    font-size:32rpx;
-    font-weight: 500;
-    margin-top:15rpx;
+    font-size:40rpx;
+    font-weight: bold;
+    margin-top:25rpx;
     margin-left: 180rpx;
+  
+}
+.ranking-list-3d{
+margin-top: -24rpx;
+    width:100rpx;
+    height: 100rpx;
 }
 .ranking-list-teachclass{
+  padding: 0;
     position: absolute;
-    margin-top:70rpx;
+    margin-top:90rpx;
     margin-left:180rpx;
-    font-size:32rpx;
+    font-size:25rpx;
     font-weight:500;
+ color: #E51C23;
 }
 .ranking-list-grade{
-    align-self: center;
+    /* align-self: center;
     margin-left: 50%;
     font-size:32rpx;
-    font-weight: 500;
-    color: #E51C23;
+    font-weight: 500; */
+    color: gray;
+     position: absolute;
+    margin-top:133rpx;
+    margin-left:180rpx;
+    font-size:28rpx;
+    display: flex;
+  width: 350rpx;
+}
+.ranking-list-grade2{
+  color: red;
+  margin-top:6rpx;
 }
 .ranking-list-buy{
     position: absolute;
-     margin-top: 4%; 
+     margin-top: 11%; 
     margin-left: 76%;
 }
 
@@ -139,16 +187,17 @@
 }
 .name-content {
   position: absolute;
-    margin-top:70rpx;
+    margin-top:90rpx;
     margin-left:180rpx;
-    font-size:32rpx;
-  width: 300rpx;
+    font-size:28rpx;
+  width: 350rpx;
   display:-webkit-box;
   -webkit-line-clamp:1;
   overflow:hidden;
   text-overflow:ellipsis;
   -webkit-box-orient:vertical;
   word-break:break-all;
+  color: #8B8682;
 }
 
 .card {
@@ -181,9 +230,18 @@
     
 }
 .btn1 {
-  width: 160rpx;
+  width: 140rpx;
+  height: 65rpx;
+  border-radius: 30px;
+    background: red;
+    color: white;
+    padding-bottom: 2rpx;
+  font-size:28rpx;
   /* margin-top: 20rpx; */
-  background-color: gray;
+  /* background-color: red;
   color: white;
-  border-radius: 14%; 
+  border-radius: 50%;  */
+}
+.btn1::after{ 
+	border: none
 }

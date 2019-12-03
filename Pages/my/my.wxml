@@ -3,17 +3,18 @@
     <view class="up">
         <view class="up-u">
             <view class="up-u-l">
-                <image class="photo" src="{{userPhoto}}" mode="aspectFill">
+            <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="user_login"  wx:if="{{!hasUserInfo}}">用户授权登录</button>
+               <image class="photo" src="{{userPhoto}}" mode="aspectFill" wx:if="{{hasUserInfo}}">
                 </image>
                 <view class="user-info">
-                    <view class="user-name">
+                    <view class="user-name" wx:if="{{hasUserInfo}}">
                         {{userName}}
                     </view>
-                    <view class="user-level">
+                    <view class="user-level" wx:if="{{hasUserInfo}}">
                         {{userLevel}}
                     </view>
                 </view>
-            </view>
+            </view>  
             <image class="setting" src="{{setting}}" mode="aspectFit">
             </image>
         </view>
@@ -59,7 +60,7 @@
         </view>
         <view class="order">
             <view class="order-in">
-                <image class="order-img" src="../../images/电影 .png" mode="aspectFit">
+                <image class="order-img" src="../../images/电影 .png" mode="aspectFit" bindtap="toOrder">
                     
                 </image>
                 <view>

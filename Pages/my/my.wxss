@@ -36,7 +36,7 @@
 
 .user-level {
     font-size: 23rpx;
-    height: 28rpx;
+    height: 35rpx;
     width: 100rpx;
     display:inline-block;
     text-align: center;
@@ -74,6 +74,7 @@
     margin: 50rpx 0rpx 0 20rpx;
     border: 1rpx solid rgb(219, 216, 216);
     border-radius: 5%;
+    background: rgb(255, 255,255)
 }
 
 .mid-text {
@@ -135,4 +136,12 @@
 .image_png{
   height:800rpx;
   width:750rpx;
+}
+.user_login{
+width: 150px;
+position: relative;
+left:50rpx;
+height:100rpx;
+top:30px;
+
 }
